@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"
+            xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+        </style>
+     </head>
+    
+<body class="#F5B4A6">
+    
+    <header class="w3-container w3-dark-grey w3-padding-32 w3-margin-top"> 
+                <center><h1><b>Food Blog</b></h1>
+                    <p>Presented By <a href="home"><b>Dreamy Team TSG</b></a></p>
+                </center>
+            </header>
+
+                        <div class="content">
+                            
+                            <div class="navbar">
+                                <ul class="nav nav-tabs">
+                                    <li role="presentation" class="nav-item">
+                                        <a class="nav-link" href="home">
+                                            <b>Home</b>
+                                        </a>
+                                    </li>
+                                   
+
+                                </ul>    
+                            </div>
+                            <center><h2>Posts By Category</h2></center>
+
+                            <div class="row m-4 border border-dark">
+                                <div class="col text-center m-3">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Username</th>
+                                                <th>Title</th>
+                                                <th>Content</th>
+                                                <th>Category</th>
+                                                <th>Tags</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr th:each="post : ${posts}">
+                                                <td th:text="${post.user.username}">Post User</td>
+                                                <td th:text="${post.title}">Post Title</td>
+                                                <td th:text="${post.content}">Post Content</td>
+                                                <td th:text="${post.category.name}">Post Category</td>
+                                                <td th:text="${post.tag}">Post Tag</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        </div>
+                        <script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+     <p>Powered By <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"><b>Dreamy Team TSG</b></a></p>
+ </footer>                      
+</body>
+                    </html>

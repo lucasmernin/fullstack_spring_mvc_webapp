@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+                <!-- Bootstrap CSS -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+                    <title>Food Blog: Tags</title>
+                    </head>
+                    <body>
+                        <div class="container">
+                            <h1><center>Food Blog</center></h1>
+                            <hr/>
+                            <div class="navbar">
+                                <ul class="nav nav-tabs">
+                                    <li role="presentation" class="nav-item">
+                                        <a class="nav-link" href="home">
+                                            Home
+                                        </a>
+                                    </li>
+                                   
+
+                                </ul>    
+                            </div>
+                            <center><h2>Tag Posts</h2></center>
+
+                            <div class="row m-4 border border-dark">
+                                <div class="col text-center m-3">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>User</th>
+                                                <th>Title</th>
+                                                <th>Content</th>
+                                                <th>Category</th>
+                                                <th>Tags</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr th:each="post : ${posts}">
+                                                <td th:text="${post.user.username}">Post User</td>
+                                                <td th:text="${post.title}">Post Title</td>
+                                                <td th:text="${post.content}">Post Content</td>
+                                                <td th:text="${post.category.name}">Post Category</td>
+                                                <td th:text="${post.tag}">Post Tag</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        </div>
+                        <script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+                    </body>
+                    </html>

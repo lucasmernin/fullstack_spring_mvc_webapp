@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hangman</title>
+      <style>
+          body{
+              background-repeat: repeat;
+              
+          }
+      
+      
+      
+      
+      </style>
+  </head>
+  <body>
+    <div class="container">
+        <img src="hmimages/6HM.png" style="max-width: 50%"/> 
+        <div class="currentWord" style="letter-spacing: 2px"></div>
+        <div class="guessedLetters">Guesses so far: </div><br>
+        <div class="remainingGuesses">Remaining guesses: </div><br>
+        <div class="youWon" style="display:none;">You won!</div>
+        <div class="youLost" style="display:none;">You lost!</div>
+        <div class="theWord"></div>
+    
+    
+        <form>
+            <label for="guess">Enter your guess:</label>
+            <textarea id="guess" name="guess"></textarea>
+            <br>
+            <button type="button" class="btn btn-primary start" action="none">Start Game</button>
+            <button type="button" class="btn btn-primary guess-button">Submit Guess</button>        
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/hangman.js"></script>
+  </body>
+</html>
